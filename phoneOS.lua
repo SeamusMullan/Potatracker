@@ -19,5 +19,5 @@ while true do
         location = location
     }
     print(data.time .. " : " .. data.location)
-    -- sleep for 1 second
+    sleep(1)
 end
