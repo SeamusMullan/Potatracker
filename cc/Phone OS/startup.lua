@@ -6,6 +6,7 @@ local pinknet = require("api/pinknet")
 -- Variables -------------------
 local t, l 
 local w, h = term.getSize()
+local id = pinknet.FindCommandCentre()
 
 -- show a startup icon of a potato --
 
@@ -22,8 +23,7 @@ while true do
   term.clear()
   term.setCursorPos(1, 1)
   pinknet.SendToCC("location", loc)
-  local id = pinknet.FindCommandCentre()
-  term.write(string.format("ID: %s", id))
+  term.write(string.format("CCID: %s", id))
   term.setCursorPos(1, 2)
   term.write(string.format("Time: %s", t))
   term.setCursorPos(1, 3)
