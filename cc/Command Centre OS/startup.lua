@@ -21,6 +21,7 @@ while true do
   else
     m.setCursorPos(1, 1)
     m.clearLine()
-    m.write(string.format("Message from %s: %s", id, message))
+    local decoded = json.decode(message)
+    m.write(string.format("Message from %s: %s", id, decoded.loc))
   end
 end
