@@ -16,7 +16,7 @@ local boot = {
   {"PotatO_", 0.5},
   {"PotatOS", 4.0}
 }
-function ui.drawLogo(booted)
+function ui.drawLogo()
   for i = 1, #boot do
     term.clear()
     term.setCursorPos(w/2 - #boot[i][1]/2 + 2, h/2)

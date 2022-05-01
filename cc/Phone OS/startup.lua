@@ -7,6 +7,7 @@ local pinknet = require("api/pinknet")
 local t, l 
 local w, h = term.getSize()
 local id = pinknet.FindCommandCentre()
+local booted = false
 
 -- show a startup icon of a potato --
 
@@ -14,7 +15,9 @@ local function potatoIcon()
     print("pass")
 end
 
-while true do
+booted = ui.drawLogo()
+
+while booted do
   t, l = location.GetTimeAndLocation()
   local loc = json.decode(l)
   if loc == nil then
