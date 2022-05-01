@@ -1,8 +1,8 @@
 -- Imports ---------------------
-local location = require("location")
-local ui = require("ui")
-local json = require("json")
-local rnet = require("rednet")
+local location = require("api/location")
+local ui = require("api/ui")
+local json = require("api/json")
+local rnet = require("api/rednet")
 -- Variables -------------------
 local t, l 
 local w, h = term.getSize()
