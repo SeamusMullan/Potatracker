@@ -3,7 +3,7 @@ local h = 20
 local logo = "Phone OS"
 local taskbar = {
   " ________________________ ",
-  "| Home | Settings | Legal|"
+  "| Home | Settings | Bonk!|"
 }
 
 function DrawUI()

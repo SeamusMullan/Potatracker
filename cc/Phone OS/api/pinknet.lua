@@ -1,21 +1,14 @@
+-- Imports ---------------------
 local json = require("api/json")
 local location = require("api/location")
-rednet.open("back") --phones have modem on the back --
 
+-- Variables -------------------
 local pinknet = { _version = "0.1.0"}
+local cC = "V2F0IHRoZSBkb2cgZG9pbg==" --Command Centre protocol
+peripheral.find("modem", rednet.open)
 
 local function FindCommandCentre()
-  local commandCentre
-  local id, obj = rednet.receive()
-  local message = json.decode(obj)
-  if message.type == nil then
-    print("No message no message type")
-    return
-  end
-  if message.type == "V2F0IHRoZSBkb2cgZG9pbg==" then
-    commandCentre = id
-  end
-  return commandCentre
+  return rednet.lookup(cC, "CommandCentre")
 end
 
 function pinknet.SendToCC()
