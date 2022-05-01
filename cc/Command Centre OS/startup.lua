@@ -14,18 +14,9 @@ m.write("Sup Bitches! Ready to spy on some idiots?!")
 
 while true do
   local id, message = rednet.receive()
-  if message == nil then
-    m.setCursorPos(1, 1)
-    m.clearLine()
-    m.write("No messages")
-  else
-    if message.type == "location" then
-      m.setCursorPos(1, 1)
-      m.clearLine()
-      m.write(string.format("ID: %s", id))
-      m.setCursorPos(1, 2)
-      m.write(string.format("x:%s, y:%s, z:%s", message.message.x, message.message.y, message.message.z))
-      
-    end
-  end
+  m.clear()
+  m.setCursorPos(1, 1)
+  m.write("ID: " .. id)
+  m.setCursorPos(1, 2)
+  m.write("Message: " .. message)
 end
