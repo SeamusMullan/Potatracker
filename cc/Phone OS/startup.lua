@@ -22,10 +22,9 @@ while booted do
   if l == nil then
     l = "Unknown Location"
   end
-  local loc = json.decode(l[1])
   term.clear()
   term.setCursorPos(1, 1)
-  pinknet.SendToCC("location", loc)
+  pinknet.SendToCC("location", l)
   term.write(string.format("CCID: %s", id))
   term.setCursorPos(1, 2)
   term.write(string.format("Time: %s", t))
@@ -34,5 +33,5 @@ while booted do
   term.setCursorPos(1, 4) 
   term.write(string.format("%s", l)) 
   term.setCursorPos(1, 5)
-  term.write(string.format("%s", loc))
+  term.write("x: " .. l.x .. " y: " .. l.y .. " z: " .. l.z)
 end

@@ -1,4 +1,3 @@
-local json = require("api/json")
 local monitors = { peripheral.find("monitor") }
 peripheral.find("modem", rednet.open)
 
@@ -14,13 +13,9 @@ m.write("Sup Bitches! Ready to spy on some idiots?!")
 
 while true do
   local id, message = rednet.receive()
-  local msg = json.encode(message)
   m.clear()
   m.setCursorPos(1, 1)
   m.write("ID: " .. id)
   m.setCursorPos(1, 2)
-  m.write("Message: " .. msg)
-  m.setCursorPos(1, 3)
-  m.write("x: ".. msg[1].x, "y: ".. msg[1].y, "z: ".. msg[1].z)
-
+  m.write("Message: " .. message)
 end

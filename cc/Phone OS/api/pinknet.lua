@@ -1,5 +1,4 @@
 -- Imports ---------------------
-local json = require("api/json")
 local pinknet = { _version = "0.1.0"}
 -- Variables -------------------
 CommandCentre = nil
@@ -16,7 +15,9 @@ end
 function pinknet.SendToCC(type, msg)
   local id = pinknet.FindCommandCentre()
   if id then
-    local message = json.encode({{type = type}, {msg = msg}})
+    local message = {}
+    message.type = type
+    message.msg = msg
     rednet.send(id, message)
   end
 end
