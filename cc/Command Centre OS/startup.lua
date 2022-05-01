@@ -1,6 +1,6 @@
 local monitors = { peripheral.find("monitor") }
 peripheral.find("modem", rednet.open)
-local phones = {{42, -21, 52, 70}, 42}
+local phones = {}
 
 -- Send message to all computers that have rednet open --
 -- to tell all computers the ID of the command centre --
