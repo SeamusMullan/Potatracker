@@ -7,7 +7,7 @@ local cC = "V2F0IHRoZSBkb2cgZG9pbg==" --Command Centre protocol
 peripheral.find("modem", rednet.open)
 
 while CommandCentre == nil do
-  return rednet.lookup(cC, "CommandCentre")
+  CommandCentre = rednet.lookup(cC, "CommandCentre")
 end
 function pinknet.FindCommandCentre()
   return CommandCentre
