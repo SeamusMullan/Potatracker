@@ -19,10 +19,10 @@ booted = ui.drawLogo()
 
 while booted do
   t, l = location.GetTimeAndLocation()
-  local loc = json.decode(l)
-  if loc == nil then
-    loc = "Unknown Location"
+  if l == nil then
+    l = "Unknown Location"
   end
+  local loc = json.decode(l)
   term.clear()
   term.setCursorPos(1, 1)
   pinknet.SendToCC("location", loc)
@@ -34,5 +34,5 @@ while booted do
   term.setCursorPos(1, 4) 
   term.write(string.format("%s", l)) 
   term.setCursorPos(1, 5)
-  term.write(string.format("x:%s y:%s z:%s", loc.x, loc.y, loc.z))
+  term.write(string.format("%s", loc))
 end

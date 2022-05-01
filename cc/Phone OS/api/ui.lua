@@ -7,6 +7,14 @@ local taskbar = {
   "| Home | Settings | Bonk!|"
 }
 local boot = {
+  {"       ", 0.1},
+  {"_      ", 0.1},
+  {"__     ", 0.1},
+  {"___    ", 0.1},
+  {"____   ", 0.1},
+  {"_____  ", 0.1},
+  {"______ ", 0.1},
+  {"_______", 0.1},
   {"P______", 0.1},
   {"Po_____", 0.1},
   {"Pot____", 0.1},
@@ -14,7 +22,7 @@ local boot = {
   {"Potat__", 0.1},
   {"Potato_", 1.0},
   {"PotatO_", 0.5},
-  {"PotatOS", 4.0}
+  {"PotatOS", 2.0}
 }
 function ui.drawLogo()
   for i = 1, #boot do
