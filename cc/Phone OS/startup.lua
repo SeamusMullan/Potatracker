@@ -17,5 +17,6 @@ while true do
   t, l = GetTimeAndLocation()
   term.clear()
   term.setCursorPos(1, 1)
-  print(FindCommandCentre)
+
+  print()
 end
