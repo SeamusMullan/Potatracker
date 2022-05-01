@@ -19,9 +19,9 @@ while true do
     m.clearLine()
     m.write("No messages")
   else
+    local msg = json.decode(message)
     m.setCursorPos(1, 1)
     m.clearLine()
-    local decoded = json.decode(message)
-    m.write(string.format("Message from %s: %s", id, decoded.loc))
+    m.write(string.format("Message from %s: %s", id, msg))
   end
 end

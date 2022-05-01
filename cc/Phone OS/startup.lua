@@ -18,5 +18,10 @@ while true do
   term.clear()
   term.setCursorPos(1, 1)
   local id = pinknet.FindCommandCentre()
-  print(string.format("ID: %s", id))
+  term.write(string.format("ID: %s", id))
+  term.setCursorPos(1, 2)
+  term.write(string.format("Time: %s", t))
+  term.setCursorPos(1, 3)
+  term.write(string.format("Location: %s", l))
+  
 end
