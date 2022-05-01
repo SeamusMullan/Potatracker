@@ -7,7 +7,7 @@ function location.GetTimeAndLocation()
   if not x then
       return time, "Unknown Location"
   end
-  local loc = json.encode({"x" == x, "y" == y, "z" == z})
+  local loc = json.encode({x, y, z})
   return time, loc
 end
 
@@ -16,7 +16,7 @@ function location.GetLocation()
   if not x then
       return "Unknown Location"
   end
-  local loc = json.encode({"x" == x, "y" == y, "z" == z})
+  local loc = json.encode({x, y, z})
   return loc
 end
 

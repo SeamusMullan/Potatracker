@@ -16,7 +16,7 @@ end
 function pinknet.SendToCC(type, msg)
   local id = pinknet.FindCommandCentre()
   if id then
-    local message = json.encode({"type" == type, "message" == msg})
+    local message = json.encode({type, msg})
     rednet.send(id, message)
   end
 end
