@@ -1,3 +1,5 @@
+local ui = { _version = "0.1.0"}
+
 local w = 26
 local h = 20
 local taskbar = {
@@ -14,12 +16,13 @@ local boot = {
   {"PotatO_", 0.5},
   {"PotatOS", 4.0}
 }
-local function drawLogo()
+function ui.drawLogo()
   for i = 1, #boot do
     term.clear()
-    term.setCursorPos(w/2 - #boot[i][1]/2, h/2 - #boot/2)
+    term.setCursorPos(w/2 - #boot[i][1]/2 + 2, h/2)
     term.write(boot[i][1])
     sleep(boot[i][2])
   end
 end
-drawLogo()
+
+return ui
