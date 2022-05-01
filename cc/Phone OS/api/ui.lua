@@ -34,4 +34,14 @@ function ui.drawLogo()
   return true
 end
 
+
+
+function ui.drawTaskbar()
+  term.setCursorPos(1, h-1)
+  term.write(table.concat(taskbar, "\n"))
+end
+
+
+
+
 return ui

@@ -24,12 +24,12 @@ while true do
   local id, message = rednet.receive()
   if locate(phones, id) then
     if message.type == "location" then
-      phones[id][1] = message.msg
+      phones[id][2] = message.msg
     end
   else
     phones[#phones + 1] = {id, message.msg}
   end
   m.setCursorPos(1, 1)
   m.clear()
-  m.write("stuff" .. tostring(message.msg))
+  m.write("stuff " .. tostring(phones))
 end
