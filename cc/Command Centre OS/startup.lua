@@ -1,4 +1,4 @@
-require("json")
+local json = require("json")
 local monitors = { peripheral.find("monitor") }
 peripheral.find("modem", rednet.open)
 

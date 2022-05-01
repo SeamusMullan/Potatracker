@@ -1,4 +1,4 @@
-require("json")
+local json = require("json")
 
 -- get the current time and location --
 function GetTimeAndLocation()

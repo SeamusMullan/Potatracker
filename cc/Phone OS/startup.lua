@@ -1,9 +1,9 @@
 -- Imports ---------------------
-require("location")
-require("ui")
-require("json")
+local location = require("location")
+local ui = require("ui")
+local json = require("json")
 -- Variables -------------------
-local time, location 
+local t, l 
 local w, h = term.getSize()
 
 -- show a startup icon of a potato --
@@ -13,5 +13,5 @@ local function potatoIcon()
 end
 
 while true do
-  local time, location GetTimeAndLocation()
+  t, l = location.GetTimeAndLocation()
 end
