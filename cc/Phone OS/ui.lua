@@ -16,7 +16,3 @@ function DrawUI()
   term.setCursorPos(1, h)
   print(taskbar[2])
 end
-DrawUI()
-while true do
-  local i = 1
-end

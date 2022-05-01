@@ -2,6 +2,7 @@
 local location = require("location")
 local ui = require("ui")
 local json = require("json")
+local rnet = require("rednet")
 -- Variables -------------------
 local t, l 
 local w, h = term.getSize()
@@ -14,4 +15,7 @@ end
 
 while true do
   t, l = location.GetTimeAndLocation()
+  term.clear()
+  term.setCursorPos(1, 1)
+  print(rnet.FindCommandCentre)
 end

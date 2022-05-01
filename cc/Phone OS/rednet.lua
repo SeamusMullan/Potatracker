@@ -1,7 +1,7 @@
 local json = require("json")
 rednet.open("back") --phones have modem on the back --
 
-local function findCommandCentre()
+function FindCommandCentre()
   local commandCentre
   local id, obj = rednet.receive()
   local message = json.decode(obj)
