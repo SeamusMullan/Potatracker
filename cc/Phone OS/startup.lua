@@ -32,7 +32,7 @@ while booted do
   term.setCursorPos(1, 3)
   term.write(string.format("Location:"))
   term.setCursorPos(1, 4) 
-  term.write(string.format("x:%s y:%s z:%s", loc.x, loc.y, loc.z))
-  term.setCursorPos(1, 5)
   term.write(string.format("%s", l)) 
+  term.setCursorPos(1, 5)
+  term.write(string.format("x:%s y:%s z:%s", loc.x, loc.y, loc.z))
 end
