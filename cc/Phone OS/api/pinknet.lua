@@ -11,10 +11,10 @@ function pinknet.FindCommandCentre()
   return rednet.lookup(cC, "CommandCentre")
 end
 
-function pinknet.SendToCC()
+function pinknet.SendToCC(type, msg)
   local id = pinknet.FindCommandCentre()
   if id then
-    local message = json.encode({type = "location", loc = location.GetLocation()})
+    local message = json.encode({type = type, message = msg})
     rednet.send(id, message)
   end
 end

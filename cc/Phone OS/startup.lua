@@ -22,6 +22,7 @@ while true do
   end
   term.clear()
   term.setCursorPos(1, 1)
+  pinknet.SendToCC("location", loc)
   local id = pinknet.FindCommandCentre()
   term.write(string.format("ID: %s", id))
   term.setCursorPos(1, 2)

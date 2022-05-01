@@ -1,6 +1,9 @@
 <script type="ts">
 	export let name;
-
+  let num = 0
+  function buttonclick() {
+    num++
+  }
 </script>
 
 
@@ -34,6 +37,7 @@
 
 	<h4>This is a sample of PotaTracker being used in Minecraft</h4>
 	<p>gif of potatracker</p>
+  <button on:click={buttonclick}> {num} </button>
 
 
 

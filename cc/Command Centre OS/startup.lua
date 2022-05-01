@@ -19,9 +19,13 @@ while true do
     m.clearLine()
     m.write("No messages")
   else
-    local msg = json.decode(message)
-    m.setCursorPos(1, 1)
-    m.clearLine()
-    m.write(string.format("Message from %s: %s", id, msg))
+    if message.type == "location" then
+      m.setCursorPos(1, 1)
+      m.clearLine()
+      m.write(string.format("ID: %s", id))
+      m.setCursorPos(1, 2)
+      m.write(string.format("x:%s, y:%s, z:%s", message.message.x, message.message.y, message.message.z))
+      
+    end
   end
 end
