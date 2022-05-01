@@ -1,19 +1,7 @@
 <script type="ts">
 	export let name;
+
 </script>
-
-
-<!-- 
-Import all the pages and follow this syntax
-
-let current = Home;
-
-import Profile from './pages/Profile.svelte';
-page('/profile', () => (current = Profile));
-
-
-page.start();
--->
 
 
 
@@ -25,22 +13,31 @@ page.start();
 			</li>
 			<h2>PotaTracker</h2>
 			<li>
-				<a href="bonk">Bonk</a>
-			</li>
-			<li>
 				<a href="https://github.com/seamusmullan/potatracker">Github</a>
 			</li>
 			<li>
-				<a href="legal">Docs</a>
+				<a href="some page on github">Docs</a>
 			</li>
 			<li>
-				<a href="legal">Legal</a>
+				<a href="some page on my site maybe?">Legal</a>
 			</li>
 		</ul>
 	</nav>
+
+	<!-- Info Text Thingy -->
 	<h1>Hello {name}!</h1>
-	<h3>PotaTracker is an app for tracking your pota.</h3>
+	<h2>PotaTracker is an app for tracking your pota.</h2>
 	<h5>not rlly tho...</h5>
+
+	<!-- GIF of PotaTracker UI -->
+	<br>
+
+	<h4>This is a sample of PotaTracker being used in Minecraft</h4>
+	<p>gif of potatracker</p>
+
+
+
+
 </main>
 
 <style>
@@ -101,18 +98,28 @@ page.start();
 
 	h1 {
 		color: #ffcc00;
-		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
 	}
 
 
-	h2 {
+	nav h2 {
 		color: #fff;
-		text-transform: uppercase;
 		font-size: 2em;
 		font-weight: 100;
 	}
+
+	h2 {
+		color: #000000;
+		font-size: 2em;
+		font-weight: 100;
+	}
+
+
+
+
+
+
 
 	@media (min-width: 640px) {
 		main {
