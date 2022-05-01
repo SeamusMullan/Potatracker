@@ -5,20 +5,20 @@ local taskbar = {
   "| Home | Settings | Bonk!|"
 }
 local boot = {
-  {"P______", 0.5},
-  {"Po_____", 0.5},
-  {"Pot____", 0.5},
-  {"Pota___", 0.5},
-  {"Potat__", 0.5},
-  {"Potato_", 2.0},
-  {"PotatO_", 1.0},
+  {"P______", 0.1},
+  {"Po_____", 0.1},
+  {"Pot____", 0.1},
+  {"Pota___", 0.1},
+  {"Potat__", 0.1},
+  {"Potato_", 1.0},
+  {"PotatO_", 0.5},
   {"PotatOS", 4.0}
 }
 local function drawLogo()
   for i = 1, #boot do
     term.clear()
-    term.setCursorPos(w/2 - #boot[i]/2, h/2 - #boot/2)
-    term.write(boot[i])
+    term.setCursorPos(w/2 - #boot[i][1]/2, h/2 - #boot/2)
+    term.write(boot[i][1])
     sleep(boot[i][2])
   end
 end
