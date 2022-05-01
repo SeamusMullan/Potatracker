@@ -17,6 +17,6 @@ while true do
   t, l = location.GetTimeAndLocation()
   term.clear()
   term.setCursorPos(1, 1)
-
-  print()
+  local id = pinknet.FindCommandCentre()
+  print(string.format("ID: %s", id))
 end

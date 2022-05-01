@@ -1,4 +1,4 @@
-local json = require("json")
+local json = require("api/json")
 local location = { _version = "0.1.0"}
 -- get the current time and location --
 function location.GetTimeAndLocation()
