@@ -1,6 +1,5 @@
 -- Imports ---------------------
 local json = require("api/json")
-local location = require("api/location")
 CommandCentre = nil
 -- Variables -------------------
 local pinknet = { _version = "0.1.0"}

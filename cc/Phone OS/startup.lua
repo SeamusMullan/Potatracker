@@ -14,7 +14,6 @@ local function potatoIcon()
 end
 
 while true do
-  pinknet.SendToCC()
   t, l = location.GetTimeAndLocation()
   local loc = json.decode(l)
   if loc == nil then
