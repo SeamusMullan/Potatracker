@@ -1,6 +1,5 @@
 local w = 26
 local h = 20
-local logo = "Phone OS"
 local taskbar = {
   " ________________________ ",
   "| Home | Settings | Bonk!|"
@@ -22,7 +21,6 @@ local function drawLogo()
     term.write(boot[i])
     sleep(boot[i][2])
   end
-  term.setCursorPos(w/2 - #logo/2, 1)
 end
 function DrawUI()
   term.clear()
