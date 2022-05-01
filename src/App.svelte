@@ -10,10 +10,13 @@
 			</li>
 			<h2>PotaTracker</h2>
 			<li>
-				<a href="about">About</a>
+				<a href="bonk">Bonk</a>
 			</li>
 			<li>
-				<a href="guide">User Guide</a>
+				<a href="https://github.com/seamusmullan/potatracker">Github</a>
+			</li>
+			<li>
+				<a href="legal">Docs</a>
 			</li>
 			<li>
 				<a href="legal">Legal</a>
