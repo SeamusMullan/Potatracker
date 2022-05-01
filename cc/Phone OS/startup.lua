@@ -14,8 +14,8 @@ local function potatoIcon()
 end
 
 while true do
-  t, l = location.GetTimeAndLocation()
+  t, l = GetTimeAndLocation()
   term.clear()
   term.setCursorPos(1, 1)
-  print(rnet.FindCommandCentre)
+  print(FindCommandCentre)
 end

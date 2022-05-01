@@ -15,4 +15,7 @@ local m = monitors[1]
 m.setTextScale(0.5)
 m.write("Sup Bitches! Ready to spy on some idiots?!")
 
-
+while true do
+  local message = rednet.receive()
+  m.write(message)
+end
