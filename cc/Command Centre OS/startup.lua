@@ -20,4 +20,7 @@ while true do
   m.write("ID: " .. id)
   m.setCursorPos(1, 2)
   m.write("Message: " .. msg)
+  m.setCursorPos(1, 3)
+  m.write("x: ".. msg[1].x, "y: ".. msg[1].y, "z: ".. msg[1].z)
+
 end

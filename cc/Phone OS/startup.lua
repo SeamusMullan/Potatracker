@@ -22,7 +22,7 @@ while booted do
   if l == nil then
     l = "Unknown Location"
   end
-  local loc = json.decode(l)
+  local loc = json.decode(l[1])
   term.clear()
   term.setCursorPos(1, 1)
   pinknet.SendToCC("location", loc)
