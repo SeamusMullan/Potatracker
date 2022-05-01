@@ -2,7 +2,7 @@
 local location = require("api/location")
 local ui = require("api/ui")
 local json = require("api/json")
-local rnet = require("api/rednet")
+local pinknet = require("api/pinknet")
 -- Variables -------------------
 local t, l 
 local w, h = term.getSize()
@@ -14,7 +14,7 @@ local function potatoIcon()
 end
 
 while true do
-  t, l = GetTimeAndLocation()
+  t, l = location.GetTimeAndLocation()
   term.clear()
   term.setCursorPos(1, 1)
 
