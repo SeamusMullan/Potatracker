@@ -1,14 +1,17 @@
 -- Imports ---------------------
 local json = require("api/json")
 local location = require("api/location")
-
+CommandCentre = nil
 -- Variables -------------------
 local pinknet = { _version = "0.1.0"}
 local cC = "V2F0IHRoZSBkb2cgZG9pbg==" --Command Centre protocol
 peripheral.find("modem", rednet.open)
 
-function pinknet.FindCommandCentre()
+while CommandCentre == nil do
   return rednet.lookup(cC, "CommandCentre")
+end
+function pinknet.FindCommandCentre()
+  return CommandCentre
 end
 
 function pinknet.SendToCC(type, msg)

@@ -14,9 +14,10 @@ m.write("Sup Bitches! Ready to spy on some idiots?!")
 
 while true do
   local id, message = rednet.receive()
+  local msg = json.encode(message)
   m.clear()
   m.setCursorPos(1, 1)
   m.write("ID: " .. id)
   m.setCursorPos(1, 2)
-  m.write("Message: " .. message)
+  m.write("Message: " .. msg)
 end
