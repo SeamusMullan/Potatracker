@@ -1,7 +1,6 @@
 -- Imports ---------------------
 local location = require("api/location")
 local ui = require("api/ui")
-local json = require("api/json")
 local pinknet = require("api/pinknet")
 -- Variables -------------------
 local t, l 
