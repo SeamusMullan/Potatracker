@@ -1,54 +1,3 @@
-local m = peripheral.find("monitor")
-
---                    #############      
---                    #############      
---          ##########(((****//////###   
---       ###(((////******///*******///###
---    ###***,,,,,,,,,,**********//*///%%%
---    ###***,,,,,,,,,,**********//*///%%%
---####///,,,.......,,,**********//*(((%%%
---####***,,,.......**********///((((((%%%
---%%%%*/*///,,,*******////*/(((((((%%%   
---%%%%//////,,,*******//////(((((((%%%   
---%%%%(((//////****//////(((%%%%%%%      
---    %%%(((///////(((%%%%%%             
---       %%%%%%%%%%%%%                   
-m.setCursorPos(1,1)
-m.write("                    #############      ")
-m.setCursorPos(1,2)
-m.write("                    #############      ")
-m.setCursorPos(1,3)
-m.write("          ##########(((****//////###   ")
-m.setCursorPos(1,4)
-m.write("       ###(((////******///*******///### ")
-m.setCursorPos(1,5)
-m.write("    ###***,,,,,,,,,,**********//*///%%% ")
-m.setCursorPos(1,6)
-m.write("    ###***,,,,,,,,,,**********//*///%%% ")
-m.setCursorPos(1,7)
-m.write("####///,,,.......,,,**********//*(((%%% ")
-m.setCursorPos(1,8)
-m.write("####***,,,.......**********///((((((%%% ")
-m.setCursorPos(1,9)
-m.write("%%%%*/*///,,,*******////*/(((((((%%%    ")
-m.setCursorPos(1,10)
-m.write("%%%%//////,,,*******//////(((((((%%%    ")
-m.setCursorPos(1,11)
-m.write("%%%%(((//////****//////(((%%%%%%%       ")
-m.setCursorPos(1,12)
-m.write("    %%%(((///////(((%%%%%%              ")
-m.setCursorPos(1,13)
-m.write("       %%%%%%%%%%%%%                    ")
-
-
-
-
-
-
-
-------------------------------------------------------------
-
-
 local function magiclines( str )
     local pos = 1;
     return function()
@@ -66,9 +15,6 @@ local function magiclines( str )
     end
 end
 
-
-
-
 local potato = [[
                     #############      
                     #############      
@@ -85,9 +31,15 @@ local potato = [[
        %%%%%%%%%%%%%         
 ]]
 
-m.setCursorPos(1,14)
-for line in magiclines(potato) do
-    m.setCursorPos(1, line)
-    m.write(line)
-    sleep(0.1)
+
+local function drawAsciiImage(image)
+    local m = peripheral.find("monitor")
+    local x, y = 1, 1
+    for line in magiclines(image) do
+        m.setCursorPos(x, -1 + y*2)
+        m.write(line)
+        y = y + 1
+    end
 end
+
+drawAsciiImage(potato)
