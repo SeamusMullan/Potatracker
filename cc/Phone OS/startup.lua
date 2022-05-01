@@ -21,6 +21,7 @@ while booted do
   if l == nil then
     l = "Unknown Location"
   end
+  
   term.clear()
   term.setCursorPos(1, 1)
   pinknet.SendToCC("location", l)

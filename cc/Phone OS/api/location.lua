@@ -4,7 +4,13 @@ function location.GetTimeAndLocation()
   local time = os.date("%H:%M:%S")
   local x, y, z = gps.locate(2)
   if not x then
-      return time, "Unknown Location"
+    x = "Unknown"
+  end
+  if not y then
+    y = "Unknown"
+  end
+  if not z then
+    z = "Unknown"
   end
   local loc = {}
   loc.x = x
@@ -16,7 +22,13 @@ end
 function location.GetLocation()
   local x, y, z = gps.locate(2)
   if not x then
-      return "Unknown Location"
+    x = "Unknown"
+  end
+  if not y then
+    y = "Unknown"
+  end
+  if not z then
+    z = "Unknown"
   end
   local loc = {}
   loc.x = x
