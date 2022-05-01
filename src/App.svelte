@@ -2,11 +2,26 @@
 	export let name;
 </script>
 
+
+<!-- 
+Import all the pages and follow this syntax
+
+let current = Home;
+
+import Profile from './pages/Profile.svelte';
+page('/profile', () => (current = Profile));
+
+
+page.start();
+-->
+
+
+
 <main>
 	<nav>
 		<ul>
 			<li>
-				<img src="https://avatars2.githubusercontent.com/u/17098477?s=460&v=4" alt="Avatar" />
+				<img src="PotatOS.jpeg" alt="Avatar" />
 			</li>
 			<h2>PotaTracker</h2>
 			<li>
